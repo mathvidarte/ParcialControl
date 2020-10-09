@@ -7,6 +7,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.moverpersonajeparcial.model.Color;
 import com.example.moverpersonajeparcial.model.Move;
 import com.google.gson.Gson;
 
@@ -99,14 +100,15 @@ public class Control extends AppCompatActivity implements View.OnTouchListener, 
                             }
                             break;
                         case R.id.color:
-                            switch (motionEvent.getAction()) {
+                           switch (motionEvent.getAction()) {
                                 case MotionEvent.ACTION_DOWN:
                                     Gson gson4 = new Gson();
-                                    Move rights = new Move ("color");
-                                    String json4 = gson4.toJson(rights);
+                                    Color color = new Color ("color");
+                                    String json4 = gson4.toJson(color);
                                     tcp.sendMessage(json4);
                                     break;
                             }
+                            break;
 
                     }
 
