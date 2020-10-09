@@ -3,6 +3,7 @@ package com.example.moverpersonajeparcial;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -106,6 +107,7 @@ public class Control extends AppCompatActivity implements View.OnTouchListener, 
                                     Color color = new Color ("color");
                                     String json4 = gson4.toJson(color);
                                     tcp.sendMessage(json4);
+                                   // Log.d("YAAAAA", ""+json4);
                                     break;
                             }
                             break;
